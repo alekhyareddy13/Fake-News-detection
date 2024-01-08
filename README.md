@@ -7,10 +7,15 @@ We will create a natural language processing application from scratch and deploy
 The tutorial is organized in the following structure:
 
 Step1: Load data from Kaggle to Google Colab.
+
 Step2: Text preprocessing.
+
 Step3: Model training and validation.
+
 Step4: Pickle and load model.
+
 Step5: Create a Flask APP and a virtual environment.
+
 Step6: Add functionalities.
 
 
