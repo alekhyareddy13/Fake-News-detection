@@ -4,7 +4,7 @@ Fake news on different platforms is spreading widely and is a matter of serious 
 Detecting fake news is critical for a healthy society, and there are multiple different approaches to detect fake news. From a machine learning standpoint, fake news detection is a binary classification problem; hence we can use traditional classification methods or state-of-the-art Neural Networks to deal with this problem.
 We will create a natural language processing application from scratch and deploy it on Flask. In the end, you will have a Fake news detection web app running on your local machine. See the teaser here.
 
-The tutorial is organized in the following structure:
+The project is organized in the following structure:
 
 Step1: Load data from Kaggle to Google Colab.
 
