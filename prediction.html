@@ -9,16 +9,41 @@
     <style>
       .fake { color: red; }
       .real { color: green; }
+       /* Updated styles for the header section */
+       header {
+        background-color: rgb(139, 205, 252);
+      }
+      /* Small round picture style */
+  .head-picture {
+    border-radius: 50%;
+    width: 150px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    margin-right: 10px;
+  }
+     
+      body {
+        background: linear-gradient(140deg, #cb98fc, #8fc3ef, #aaf5de, #8abce4);
+        /* Adjust the colors and angles as needed */
+      }
+      
+      footer {
+        background-color: rgb(139, 205, 252);
+        padding: 1rem; /* Added padding for better visibility */
+      }
+      .our-team-section {
+        background-color: rgb(242, 166, 178);
+        padding: 2rem; /* Added padding for better visibility */
+      }
+
   </style>
   </head>
   <body>
     <header class="text-gray-600 body-font -my-8">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="ml-3 text-xl">Fake/Real</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/2542/2542479.png" alt="Fake/Real" class="head-picture">
+            <h1>Fake/Real</h1> 
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
           
@@ -33,15 +58,15 @@
           <div class="flex flex-col text-center w-full mb-20">
             
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Prediction</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">We use our machine learning model to make prediction. Hope this helps.</p>
-            <br><h1><p><b>The news "<strong>{{ headline }}</strong>" is 
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">We use our machine learning model to make predictions. Hope this helps!</p>
+            <br><h1><p><b>The input news "<strong>{{ headline }}</strong>" is 
               <span class="{% if prediction_text == 'FAKE' %}fake{% else %}real{% endif %}">
                   {{ prediction_text }}
               </span></b></p></h1>
           </div>
           <form action="/prediction" method="POST">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">News to predict</label>
+              <label for="exampleInputEmail1" class="form-label">Please enter/paste the news headline to predict below:</label>
               <input type="text" class="form-control" id="exampleInputEmail1" id="news" name="news" aria-describedby="emailHelp"> 
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
