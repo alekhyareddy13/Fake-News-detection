@@ -1,2 +1,2 @@
 # Fake-News-detection
-Project 1 OOSE
+Project using ML Techniques and Kaggle datasets to predict if a given news headline is fake or real.
